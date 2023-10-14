@@ -1,16 +1,26 @@
-# imc_app
 
-A new Flutter project.
+# Calcul d'indice de masse corporelle
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+Ce projet est une application mobile simple développée en Flutter pour calculer l'Indice de Masse Corporelle(IMC) d'un utilisateur. L'IMC est un indicateur couramment utilisé pour évaluer si une personne a un poids corporel sain en fonction de sa taille.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Fonctionnalités principales :
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Calcul de l'IMC en fonction du poids et de la taille de l'utilisateur.
+- Interprétation de l'IMC pour indiquer si l'utilisateur est en surpoids, normal, maigre, etc.
+- Interface utilisateur conviviale pour la saisie des informations.
+
+
+## Comment installer et exécuter l'application ?
+
+Clonez ce référentiel sur votre machine locale.
+Assurez-vous d'avoir Flutter installé. Si ce n'est pas le cas, suivez les
+[ instructions d'installation de Flutter.](https://docs.flutter.dev/get-started/install).
+Exécutez flutter pub get pour obtenir les dépendances nécessaires.
+Connectez un émulateur ou un appareil Android/iOS à votre machine.
+Exécutez l'application en utilisant la commande
+```bash
+  flutter run
+
+👷 En développement👷
