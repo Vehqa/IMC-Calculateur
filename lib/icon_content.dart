@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imc_app/constants.dart';
 
 class ReusableGender extends StatelessWidget {
   ReusableGender({required this.genderIcon, required this.genderName});
@@ -18,12 +19,7 @@ class ReusableGender extends StatelessWidget {
         SizedBox(
           height: 15.0,
         ),
-        Text(
-          genderName,
-          style: TextStyle(
-            color: Color(0xFF8D8E98),
-          ),
-        )
+        Text(genderName, style: labelTextStyle),
       ],
     );
   }
