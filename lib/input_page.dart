@@ -44,38 +44,34 @@ class _InputPageState extends State<InputPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: GestureDetector(
-                      onTap: () {
+                    child: ReusableCard(
+                      onPress: () {
                         setState(() {
                           updateColor(GenderType.male);
                         });
                       },
-                      child: ReusableCard(
-                        colour: isMaleCardActive
-                            ? activeCardColour
-                            : inactiveCardColour,
-                        cardChild: ReusableGender(
-                          genderName: 'HOMME',
-                          genderIcon: FontAwesomeIcons.mars,
-                        ),
+                      colour: isMaleCardActive
+                          ? activeCardColour
+                          : inactiveCardColour,
+                      cardChild: ReusableGender(
+                        genderName: 'HOMME',
+                        genderIcon: FontAwesomeIcons.mars,
                       ),
                     ),
                   ),
                   Expanded(
-                    child: GestureDetector(
-                      onTap: () {
+                    child: ReusableCard(
+                      onPress: () {
                         setState(() {
                           updateColor(GenderType.female);
                         });
                       },
-                      child: ReusableCard(
-                        colour: isFemaleCardActive
-                            ? activeCardColour
-                            : inactiveCardColour,
-                        cardChild: ReusableGender(
-                          genderName: 'FEMME',
-                          genderIcon: FontAwesomeIcons.venus,
-                        ),
+                      colour: isFemaleCardActive
+                          ? activeCardColour
+                          : inactiveCardColour,
+                      cardChild: ReusableGender(
+                        genderName: 'FEMME',
+                        genderIcon: FontAwesomeIcons.venus,
                       ),
                     ),
                   ),
