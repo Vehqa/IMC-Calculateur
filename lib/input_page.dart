@@ -3,10 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'icon_content.dart';
 import 'reusable_card.dart';
-
-const activeCardColour = Color(0xFF1D1E33);
-const inactiveCardColour = Color(0xFF111328);
-const bottomContainerColour = Color(0xFFBB1555);
+import 'constants.dart';
 
 enum GenderType { male, female }
 
@@ -18,6 +15,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   bool isMaleCardActive = false;
   bool isFemaleCardActive = false;
+  int height = 170;
 
   void updateColor(GenderType gender) {
     setState(() {
@@ -39,6 +37,7 @@ class _InputPageState extends State<InputPage> {
           title: Center(child: Text('Calculateur d\'IMC')),
         ),
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(
               child: Row(
@@ -79,7 +78,48 @@ class _InputPageState extends State<InputPage> {
               ),
             ),
             Expanded(
-              child: ReusableCard(colour: activeCardColour),
+              child: ReusableCard(
+                colour: activeCardColour,
+                cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'TAILLE',
+                      style: labelTextStyle,
+                    ),
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
+                      children: [
+                        Text(
+                          height.toString(),
+                          style: numberTextStyle,
+                        ),
+                        Text(
+                          'cm',
+                          style: labelTextStyle,
+                        )
+                      ],
+                    ),
+                    Slider(
+                      value: height.toDouble(),
+                      min: 120,
+                      max: 220,
+                      inactiveColor: Color(0xFF8D8E98),
+                      activeColor: Color(0xFFEB1555),
+                      onChanged: (double newValue) {
+                        setState(() {
+                          height = newValue.round();
+                        });
+                      },
+                    ),
+                  ],
+                ),
+              ),
             ),
             Expanded(
               child: Row(
