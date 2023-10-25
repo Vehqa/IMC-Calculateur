@@ -15,6 +15,7 @@ class InputPage extends StatefulWidget {
 class _InputPageState extends State<InputPage> {
   bool isMaleCardActive = false;
   bool isFemaleCardActive = false;
+
   int height = 170;
 
   void updateColor(GenderType gender) {
@@ -105,17 +106,26 @@ class _InputPageState extends State<InputPage> {
                         )
                       ],
                     ),
-                    Slider(
-                      value: height.toDouble(),
-                      min: 120,
-                      max: 220,
-                      inactiveColor: Color(0xFF8D8E98),
-                      activeColor: Color(0xFFEB1555),
-                      onChanged: (double newValue) {
-                        setState(() {
-                          height = newValue.round();
-                        });
-                      },
+                    SliderTheme(
+                      data: SliderTheme.of(context).copyWith(
+                          inactiveTrackColor: Color(0xFF8D8E98),
+                          activeTrackColor: Color(0xFFEB1555),
+                          thumbColor: Color(0xFFEB1555),
+                          thumbShape:
+                              RoundSliderThumbShape(enabledThumbRadius: 12.0),
+                          overlayColor: Color(0x29EB1555),
+                          overlayShape:
+                              RoundSliderOverlayShape(overlayRadius: 22.0)),
+                      child: Slider(
+                        value: height.toDouble(),
+                        min: 120,
+                        max: 220,
+                        onChanged: (double newValue) {
+                          setState(() {
+                            height = newValue.round();
+                          });
+                        },
+                      ),
                     ),
                   ],
                 ),
