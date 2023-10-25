@@ -14,9 +14,7 @@ Calcul de l'IMC en fonction du poids et de la taille de l'utilisateur.
 
 ## Screenshots
 
-![IMCS1](https://github.com/Vehqa/IMC-Calculateur/assets/119660344/68f7492d-f688-466e-a45c-0e7cb34f09da)
-![IMCS2](https://github.com/Vehqa/IMC-Calculateur/assets/119660344/79b9ea01-1f3e-4a05-8d78-b162e32d3148)
-
+![IMCScreen](https://github.com/Vehqa/IMC-Calculateur/assets/119660344/f435a8b7-8536-496e-8254-e1cba1e3f83e)
 
 ## Comment installer et exécuter l'application ?
 
